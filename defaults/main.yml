@@ -1,0 +1,8 @@
+---
+# Redis Configuration
+# ~~~~~~~~~~~~~~~~~~~
+# Configuration parameters passed to redis.conf
+
+bind_address: '127.0.0.1'
+require_pass: False
+auth_password: 'pass'

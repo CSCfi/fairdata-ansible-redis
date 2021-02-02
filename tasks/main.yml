@@ -1,0 +1,8 @@
+---
+- name: Include service installation tasks
+  include_tasks: "redis-service.yml"
+  tags: redis-service
+
+- name: Include service installation tasks
+  include_tasks: "redis-configuration.yml"
+  tags: redis-configuration

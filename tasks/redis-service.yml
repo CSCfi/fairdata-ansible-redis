@@ -1,0 +1,15 @@
+---
+- name: Ensure Redis is installed
+  yum:
+    name: redis
+    state: latest
+  become: yes
+  tags: redis-service
+
+- name: Ensure Redis is started
+  service:
+    name: redis
+    state: started
+    enabled: yes
+  become: yes
+  tags: redis-service
