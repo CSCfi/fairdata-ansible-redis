@@ -1,0 +1,12 @@
+---
+- name: Ensure Redis is configured correctly
+  template:
+    src: 'redis.conf.j2'
+    dest: '/etc/redis.conf'
+    owner: 'redis'
+    group: 'redis'
+    mode: 0640
+  become: yes
+  notify:
+  - Restart Redis
+  tags: redis-configuration
