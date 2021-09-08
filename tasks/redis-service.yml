@@ -2,7 +2,8 @@
 - name: Ensure Redis is installed
   yum:
     name: redis
-    state: latest
+    # state: present, in order not to upgrade any package to an untested version
+    state: present
   become: yes
   tags: redis-service
 
